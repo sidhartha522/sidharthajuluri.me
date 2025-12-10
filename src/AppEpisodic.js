@@ -1,5 +1,5 @@
-import React, { useRef } from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import "./AppEpisodic.css";
 
 const episodes = [
@@ -48,8 +48,9 @@ const episodes = [
     title: "NeverEndingTales: My First Viral Content Project",
     period: "Early College",
     theme: "from-pink-700 via-rose-900 to-black",
+    title: "NeverEndingTalesss: My First Viral Content Project",
     summary:
-      "Started NeverEndingTales, an Instagram page focused on relatable college content. Created 100+ videos, and several went viral with 1M–2M+ views.",
+      "Started NeverEndingTalesss, an Instagram page focused on relatable college content. Created 100+ videos, and several went viral with 1M–2M+ views.",
     whatIDid: [
       "Created and edited around 100+ videos/reels focused on college life and relatable moments.",
       "Several reels went viral, crossing 1M–2M+ views and giving me a first taste of internet reach.",
@@ -275,10 +276,10 @@ const episodes = [
     period: "Sept 2024 → Present",
     theme: "from-slate-700 via-slate-900 to-black",
     summary:
-      "Khatape evolved into Ekthaa. Started as 'KataPay' focused on credit tracking, then pivoted into a broader MSME platform. Currently in beta, building with a team.",
+      "Khatape evolved into Ekthaa. Started as 'Khatape' focused on credit tracking, then pivoted into a broader MSME platform. Currently in beta, building with a team.",
     whatIDid: [
       "Took everything learned from Khatape and crackers experience and decided to go bigger with Ekthaa.",
-      "Started in Sept 2024 as 'KataPay' focused only on credit tracking, and gradually pivoted into Ekthaa.",
+      "Started in Sept 2024 as 'Khatape' focused only on credit tracking, and gradually pivoted into Ekthaa.",
       "Expanded the vision to serve MSMEs with multiple features (currently in stealth mode).",
       "Built prototypes, tested in real shops, solved login and reliability issues, and kept iterating.",
       "Hired interns, guided them to build the end-to-end website and product flows.",
@@ -314,92 +315,85 @@ const episodes = [
   },
 ];
 
-function EpisodeSection({ episode, index }) {
+function EpisodeCard({ episode, index, expanded, onClick }) {
   return (
-    <section
-      id={episode.id}
-      className={`min-h-screen flex items-center py-16 px-4 sm:px-8 lg:px-16 bg-gradient-to-br ${episode.theme}`}
+    <motion.div
+      layout
+      className={`mb-8 rounded-3xl shadow-lg cursor-pointer overflow-hidden bg-gradient-to-br ${episode.theme}`}
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, delay: index * 0.05 }}
+      onClick={onClick}
     >
-      <motion.div
-        className="max-w-5xl mx-auto text-white"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.4 }}
-        transition={{ duration: 0.6, delay: 0.1 }}
-      >
-        <div className="text-xs sm:text-sm uppercase tracking-[0.25em] mb-3 text-white/70">
+      <div className="p-6">
+        <div className="text-xs sm:text-sm uppercase tracking-[0.25em] mb-2 text-white/70 break-words text-center">
           {episode.label} • {episode.period}
         </div>
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold mb-4">
+        <h2 className="text-xl sm:text-2xl font-semibold mb-2 text-white break-words text-center">
           {episode.title}
         </h2>
-        <p className="text-sm sm:text-base lg:text-lg text-white/85 mb-8 max-w-3xl">
+        <p className="text-sm sm:text-base text-white/85 mb-2 break-words">
           {episode.summary}
         </p>
-
-        <div className="grid gap-8 md:grid-cols-2">
-          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-5 sm:p-6 shadow-lg">
-            <h3 className="text-sm font-semibold tracking-wide text-white/80 mb-3">
-              What I actually did
-            </h3>
-            <ul className="space-y-2 text-sm sm:text-base">
-              {episode.whatIDid.map((item, i) => (
-                <li key={i} className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-white/70 flex-shrink-0" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="bg-black/20 backdrop-blur-md border border-white/10 rounded-3xl p-5 sm:p-6 shadow-lg">
-            <h3 className="text-sm font-semibold tracking-wide text-white/80 mb-3">
-              What I learned
-            </h3>
-            <ul className="space-y-2 text-sm sm:text-base">
-              {episode.learnings.map((item, i) => (
-                <li key={i} className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-300 flex-shrink-0" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        <div className="mt-10 text-xs sm:text-sm text-white/70">
-          <span className="inline-flex items-center gap-2">
-            <span className="h-1.5 w-1.5 rounded-full bg-white/60" />
-            Episode {index.toString().padStart(2, "0")} of{" "}
-            {(episodes.length).toString().padStart(2, "0")} • Scroll for
-            the next chapter
-          </span>
-        </div>
-      </motion.div>
-    </section>
+        <AnimatePresence>
+          {expanded && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.4 }}
+              className="mt-4"
+            >
+              <div className="grid gap-8 md:grid-cols-2">
+                <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-5 sm:p-6 shadow-lg">
+                  <h3 className="text-sm font-semibold tracking-wide text-white/80 mb-3">
+                    What I actually did
+                  </h3>
+                  <ul className="space-y-2 text-sm sm:text-base">
+                    {episode.whatIDid.map((item, i) => (
+                      <li key={i} className="flex gap-2">
+                        <span className="mt-1 h-1.5 w-1.5 rounded-full bg-white/70 flex-shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="bg-black/20 backdrop-blur-md border border-white/10 rounded-3xl p-5 sm:p-6 shadow-lg">
+                  <h3 className="text-sm font-semibold tracking-wide text-white/80 mb-3">
+                    What I learned
+                  </h3>
+                  <ul className="space-y-2 text-sm sm:text-base">
+                    {episode.learnings.map((item, i) => (
+                      <li key={i} className="flex gap-2">
+                        <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-300 flex-shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <div className="mt-8 text-xs sm:text-sm text-white/70">
+                <span className="inline-flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-white/60" />
+                  Episode {index.toString().padStart(2, "0")} of {episodes.length.toString().padStart(2, "0")}
+                </span>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    </motion.div>
   );
 }
 
 export default function SidharthaStoryline() {
-  const containerRef = useRef(null);
-
-  const scrollToEpisode = (id) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
+  const [expandedIndex, setExpandedIndex] = useState(null);
 
   return (
-    <div
-      ref={containerRef}
-      className="min-h-screen bg-black text-white font-sans"
-    >
-
-      {/* Hero / Intro */}
-      <section className="min-h-[80vh] bg-gradient-to-b from-black via-slate-950 to-slate-900 flex items-center px-4 sm:px-8 lg:px-16">
+    <div className="min-h-screen bg-black text-white font-sans px-4 sm:px-8 lg:px-16">
+      <section className="min-h-[40vh] flex items-center justify-center">
         <motion.div
-          className="max-w-4xl mx-auto"
+          className="max-w-4xl mx-auto text-center"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
@@ -408,38 +402,29 @@ export default function SidharthaStoryline() {
             EPISODIC PORTFOLIO
           </p>
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-semibold mb-5 leading-tight">
-            I'm Sidhartha — a founder, content creator, and{" "}
+            I'm Sidhartha — a founder, content creator, and
             <span className="inline-block bg-gradient-to-r from-emerald-300 via-sky-300 to-fuchsia-300 bg-clip-text text-transparent">
               business-obsessed problem solver
-            </span>{" "}
+            </span>
             who learns by trying, failing, and iterating.
           </h1>
-          <p className="text-sm sm:text-lg text-white/80 max-w-2xl mb-6">
-            This website is my story as a timeline of experiments — from cracker
-            shops and college reels to NuGuilt, Khatape, and now Ekthaa. Scroll
-            through the episodes to see how each phase shaped the next.
+          <p className="text-sm sm:text-lg text-white/80 max-w-2xl mx-auto mb-6">
+            This website is my story as a timeline of experiments — from cracker shops and college reels to NuGuilt, Khatape, and now Ekthaa. Click any episode to see the full story.
           </p>
-          <div className="flex flex-wrap gap-3 text-xs sm:text-sm">
-            <span className="px-3 py-1.5 rounded-full bg-white/10 border border-white/15">
-              Founder • Ekthaa
-            </span>
-            <span className="px-3 py-1.5 rounded-full bg-white/10 border border-white/15">
-              Content & Digital Marketing
-            </span>
-            <span className="px-3 py-1.5 rounded-full bg-white/10 border border-white/15">
-              Learn-by-Doing Mindset
-            </span>
-          </div>
         </motion.div>
       </section>
-
-      {/* Episodes */}
-      {episodes.map((ep, index) => (
-        <EpisodeSection key={ep.id} episode={ep} index={index + 1} />
-      ))}
-
-      {/* Closing section */}
-      <section className="min-h-[60vh] bg-gradient-to-t from-black via-slate-950 to-black flex items-center px-4 sm:px-8 lg:px-16">
+      <div className="max-w-5xl mx-auto">
+        {episodes.map((ep, idx) => (
+          <EpisodeCard
+            key={ep.id}
+            episode={ep}
+            index={idx + 1}
+            expanded={expandedIndex === idx}
+            onClick={() => setExpandedIndex(expandedIndex === idx ? null : idx)}
+          />
+        ))}
+      </div>
+      <section className="min-h-[30vh] flex items-center justify-center">
         <motion.div
           className="max-w-3xl mx-auto text-center"
           initial={{ opacity: 0, y: 40 }}
@@ -451,15 +436,10 @@ export default function SidharthaStoryline() {
             This is not a "success story" page. It's a "work in progress" log.
           </h2>
           <p className="text-sm sm:text-lg text-white/80 mb-6">
-            I don't have everything figured out. What I do have is proof that I
-            keep showing up — in shops, in code, in content, and in every idea I
-            chase. If you're a founder, a VC, or someone who enjoys building
-            from scratch, you'll probably enjoy this journey.
+            I don't have everything figured out. What I do have is proof that I keep showing up — in shops, in code, in content, and in every idea I chase. If you're a founder, a VC, or someone who enjoys building from scratch, you'll probably enjoy this journey.
           </p>
           <p className="text-xs sm:text-sm text-white/60">
-            If you'd like to connect about Ekthaa, content, or future ideas like
-            NuGuilt, feel free to reach out on LinkedIn or Instagram
-            (@sidstartsup).
+            If you'd like to connect about Ekthaa, content, or future ideas like NuGuilt, feel free to reach out on LinkedIn or Instagram (@sidstartsup) or via email at <a href="mailto:sidhartha@ekthaa.app" className="text-emerald-300 underline">sidhartha@ekthaa.app</a>.
           </p>
         </motion.div>
       </section>

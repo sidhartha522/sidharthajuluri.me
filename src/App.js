@@ -132,18 +132,18 @@ export default function App() {
           </div>
         </section>
 
-        {/* COLLEGE / NEVERENDINGTALES */}
+        {/* COLLEGE / NEVERENDINGTALESSS */}
         <section className="section">
           <div className="section-inner">
             <div className="section-header">
               <div className="pill">02 · College</div>
-              <h2>College: NeverEndingTales & Viral Reels</h2>
+              <h2>College: NeverEndingTalesss & Viral Reels</h2>
             </div>
             <div className="section-grid">
               <div className="section-text">
                 <p>
                   In my B.Tech second year, I started{" "}
-                  <strong>NeverEndingTales</strong>, a fun Instagram page about
+                  <strong>NeverEndingTalesss</strong>, a fun Instagram page about
                   college life. We posted around{" "}
                   <strong>100+ short videos</strong>, and{" "}
                   <strong>5–6 reels crossed 1M–2M+ views</strong>.
@@ -282,7 +282,7 @@ export default function App() {
               <div className="section-text">
                 <p>
                   In September 2024, I started working on a simple idea called{" "}
-                  <strong>KataPay</strong> — a basic digital credit ledger for
+                  <strong>Khatape</strong> — a basic digital credit ledger for
                   small shops. We built an early prototype, tested it in a real
                   shop, hit login and UX issues, fixed them, iterated and kept
                   improving.
