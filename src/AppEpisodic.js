@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Plasma from "./Plasma";
 import "./AppEpisodic.css";
 
 const episodes = [
@@ -391,9 +392,20 @@ export default function SidharthaStoryline() {
 
   return (
     <div className="min-h-screen bg-black text-white font-sans px-4 sm:px-8 lg:px-16">
-      <section className="min-h-[40vh] flex items-center justify-center">
+      <section className="min-h-[40vh] flex items-center justify-center" style={{ position: 'relative' }}>
+        <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}>
+          <Plasma 
+            color="#ff6b35"
+            speed={0.6}
+            direction="forward"
+            scale={1.1}
+            opacity={0.8}
+            mouseInteractive={true}
+          />
+        </div>
         <motion.div
           className="max-w-4xl mx-auto text-center"
+          style={{ position: 'relative', zIndex: 1 }}
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
