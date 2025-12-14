@@ -1,13 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
-import App from './AppEpisodic';
+import AppEpisodic from './AppEpisodic';
+import ContentPortfolio from './ContentPortfolio';
+import Navigation from './Navigation';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<AppEpisodic />} />
+        <Route path="/content" element={<ContentPortfolio />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
