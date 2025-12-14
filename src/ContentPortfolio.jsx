@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import GradientBlinds from './GradientBlinds';
 import './ContentPortfolio.css';
 
 const contentProjects = [
@@ -90,7 +91,7 @@ What I learned: Professional video production workflows, how to work with client
       { id: 3, reelUrl: 'https://www.instagram.com/reel/C74JsofyVTc/?igsh=cDR5NnRkNGYzOGI3' },
       { id: 4, reelUrl: 'https://www.instagram.com/reel/DGk6jSnTYum/?igsh=M3psMDgwbWM1N2Y0' },
       { id: 5, reelUrl: 'https://www.instagram.com/reel/C7whnGJi1SI/?igsh=MXhoejdtNXFqZDVr' },
-      { id: 6, reelUrl: 'https://www.instagram.com/reel/C7b1X0vycoM/?igsh=Ym5iNnJyemM1ajRz' }
+      { id: 6, reelUrl: 'https://www.instagram.com/p/DMFa4yvgmKG/?igsh=MWJvdG5xMjYzbjYzbQ==' }
     ],
     stats: 'Cold DM success • Agency workflows learned',
     color: 'from-indigo-600 to-purple-600'
@@ -272,12 +273,29 @@ function ContentCard({ project }) {
 export default function ContentPortfolio() {
   return (
     <div className="content-portfolio">
-      <section className="hero-section">
+      <section className="hero-section" style={{ position: 'relative' }}>
+        <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}>
+          <GradientBlinds
+            gradientColors={['#667eea', '#764ba2']}
+            angle={45}
+            noise={0.2}
+            blindCount={15}
+            blindMinWidth={50}
+            spotlightRadius={0.6}
+            spotlightSoftness={1.2}
+            spotlightOpacity={0.8}
+            mouseDampening={0.15}
+            distortAmount={0}
+            shineDirection="right"
+            mixBlendMode="lighten"
+          />
+        </div>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           className="hero-content"
+          style={{ position: 'relative', zIndex: 1 }}
         >
           <h1 className="hero-title">
             Content That People Actually Want to Watch

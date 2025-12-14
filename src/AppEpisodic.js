@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Plasma from "./Plasma";
+import GradientBlinds from "./GradientBlinds";
 import "./AppEpisodic.css";
 
 const episodes = [
@@ -46,10 +46,9 @@ const episodes = [
   {
     id: "ep-03",
     label: "EP 03",
-    title: "NeverEndingTales: My First Viral Content Project",
+    title: "NeverEndingTalesss: My First Viral Content Project",
     period: "Early College",
     theme: "from-pink-700 via-rose-900 to-black",
-    title: "NeverEndingTalesss: My First Viral Content Project",
     summary:
       "Started NeverEndingTalesss, an Instagram page focused on relatable college content. Created 100+ videos, and several went viral with 1M–2M+ views.",
     whatIDid: [
@@ -394,13 +393,19 @@ export default function SidharthaStoryline() {
     <div className="min-h-screen bg-black text-white font-sans px-4 sm:px-8 lg:px-16">
       <section className="min-h-[40vh] flex items-center justify-center" style={{ position: 'relative' }}>
         <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}>
-          <Plasma 
-            color="#ff6b35"
-            speed={0.6}
-            direction="forward"
-            scale={1.1}
-            opacity={0.8}
-            mouseInteractive={true}
+          <GradientBlinds
+            gradientColors={['#FF9FFC', '#5227FF']}
+            angle={0}
+            noise={0.3}
+            blindCount={12}
+            blindMinWidth={50}
+            spotlightRadius={0.5}
+            spotlightSoftness={1}
+            spotlightOpacity={1}
+            mouseDampening={0.15}
+            distortAmount={0}
+            shineDirection="left"
+            mixBlendMode="lighten"
           />
         </div>
         <motion.div
