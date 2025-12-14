@@ -188,13 +188,43 @@ function ContentCard({ project }) {
   return (
     <motion.div
       layout
-      className={`content-card bg-gradient-to-br ${project.color}`}
+      className="content-card"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
+      style={{ position: 'relative', overflow: 'hidden' }}
     >
-      <div className="card-header">
+      <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0, opacity: 0.4 }}>
+        <GradientBlinds
+          gradientColors={project.id === 'sidstartsup' ? ['#9333ea', '#db2777'] :
+                         project.id === 'neverendingtalesss' ? ['#ec4899', '#f43f5e'] :
+                         project.id === 'goextramile' ? ['#2563eb', '#06b6d4'] :
+                         project.id === 'infloo' ? ['#4f46e5', '#7c3aed'] :
+                         project.id === 'rateitrightit' ? ['#eab308', '#f97316'] :
+                         project.id === 'openmindd' ? ['#059669', '#10b981'] :
+                         project.id === 'unboxjsg' ? ['#dc2626', '#ec4899'] :
+                         ['#6b7280', '#475569']}
+          angle={project.id === 'sidstartsup' ? 45 : 
+                 project.id === 'neverendingtalesss' ? 90 :
+                 project.id === 'goextramile' ? 135 :
+                 project.id === 'infloo' ? 0 :
+                 project.id === 'rateitrightit' ? 180 :
+                 project.id === 'openmindd' ? 225 :
+                 project.id === 'unboxjsg' ? 270 : 315}
+          noise={0.15}
+          blindCount={8}
+          blindMinWidth={40}
+          spotlightRadius={0.4}
+          spotlightSoftness={0.8}
+          spotlightOpacity={0.6}
+          mouseDampening={0.2}
+          distortAmount={0}
+          shineDirection="left"
+          mixBlendMode="lighten"
+        />
+      </div>
+      <div className="card-header" style={{ position: 'relative', zIndex: 1 }}>
         <div className="project-info">
           <h3 className="project-name">{project.name}</h3>
           <span className="project-platform">{project.platform}</span>
@@ -211,12 +241,12 @@ function ContentCard({ project }) {
         )}
       </div>
 
-      <p className="short-description">{project.shortDesc}</p>
+      <p className="short-description" style={{ position: 'relative', zIndex: 1 }}>{project.shortDesc}</p>
 
-      <div className="stats-badge">{project.stats}</div>
+      <div className="stats-badge" style={{ position: 'relative', zIndex: 1 }}>{project.stats}</div>
 
       {project.thumbnails.length > 0 && (
-        <div className="thumbnails-grid">
+        <div className="thumbnails-grid" style={{ position: 'relative', zIndex: 1 }}>
           {project.thumbnails.map((thumb) => (
             <a
               key={thumb.id}
@@ -247,6 +277,7 @@ function ContentCard({ project }) {
       <button 
         className="read-more-btn"
         onClick={() => setExpanded(!expanded)}
+        style={{ position: 'relative', zIndex: 1 }}
       >
         {expanded ? '← Show Less' : 'Read More →'}
       </button>
