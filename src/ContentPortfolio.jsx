@@ -17,9 +17,12 @@ The numbers: 800+ followers with just ~15-20 posts, 600K+ total Reel views, 50-1
 
 What I learned: Niche + authenticity = real engagement. You don't need thousands of followers to build meaningful connections. Startup people want real stories, not highlight reels. Content can literally open doors if you do it right.`,
     thumbnails: [
-      { id: 1, reelUrl: 'https://www.instagram.com/reel/example1/', image: '/placeholder1.jpg' },
-      { id: 2, reelUrl: 'https://www.instagram.com/reel/example2/', image: '/placeholder2.jpg' },
-      { id: 3, reelUrl: 'https://www.instagram.com/reel/example3/', image: '/placeholder3.jpg' }
+      { id: 1, reelUrl: 'https://www.instagram.com/reel/DNnz3T8yP9Z/?igsh=MTBzd3NrbmlxMm5ldA==' },
+      { id: 2, reelUrl: 'https://www.instagram.com/reel/DN_MK0aEioO/?igsh=MWRibXlyMjFlbXgwaQ==' },
+      { id: 3, reelUrl: 'https://www.instagram.com/reel/DNi7t_0SGJC/?igsh=dzVhcThtMjkxM3B1' },
+      { id: 4, reelUrl: 'https://www.instagram.com/reel/DMsPMUfSAVR/?igsh=OXNiaWc5cGYxeDVl' },
+      { id: 5, reelUrl: 'https://www.instagram.com/reel/DSDeyTxkzQX/?igsh=bmgya3JyMDBhZXk2' },
+      { id: 6, reelUrl: 'https://www.instagram.com/reel/DL-Sxf-yaHN/?igsh=MTdibjV3MnZmd3A5Nw==' }
     ],
     stats: '800+ followers • 600K+ views • 50+ DMs',
     color: 'from-purple-600 to-pink-600'
@@ -38,9 +41,12 @@ The breakthrough: Multiple Reels crossed 2 million views (some hit 2.5M+), sever
 
 What I learned: Virality isn't luck—it's understanding audience psychology. Timing matters more than production quality. Trends have a 24-48 hour sweet spot. You don't need professional equipment—just a good idea and fast execution.`,
     thumbnails: [
-      { id: 1, reelUrl: 'https://www.instagram.com/reel/example1/', image: '/placeholder1.jpg' },
-      { id: 2, reelUrl: 'https://www.instagram.com/reel/example2/', image: '/placeholder2.jpg' },
-      { id: 3, reelUrl: 'https://www.instagram.com/reel/example3/', image: '/placeholder3.jpg' }
+      { id: 1, reelUrl: 'https://www.instagram.com/reel/CzHLhTJC41a/?igsh=dWptNGQ0YWFpcW5h' },
+      { id: 2, reelUrl: 'https://www.instagram.com/reel/Cvuo92LrmvX/?igsh=MXAzZ3h6anRjM212cg==' },
+      { id: 3, reelUrl: 'https://www.instagram.com/reel/CwFZwd-NNRB/?igsh=MWYyaDkwNGN1a2E0bA==' },
+      { id: 4, reelUrl: 'https://www.instagram.com/reel/C5K_lVvr3XN/?igsh=MTIyemdkcTVlNmV3cA==' },
+      { id: 5, reelUrl: 'https://www.instagram.com/reel/C4QLbDsPuye/?igsh=ZHdnMXQ5dmRtcmhv' },
+      { id: 6, reelUrl: 'https://www.instagram.com/reel/C1FYa47P8Bz/?igsh=OXY0cTNndWE1dXM1' }
     ],
     stats: '2M+ views • Multiple viral reels',
     color: 'from-pink-600 to-rose-600'
@@ -59,9 +65,8 @@ The challenge: Made 7-8 high-quality videos. Most never got posted. Only 2 Reels
 
 What I learned the hard way: Get everything in writing. Not every startup knows what to do with good content. Company culture matters—if they don't value your work enough to post it, they probably won't value paying you either. I learned more from this mess than from some "successful" projects.`,
     thumbnails: [
-      { id: 1, reelUrl: 'https://www.instagram.com/reel/DPP2KfwiKFy/?igsh=MWhmeHV1YzNlcXA0dg==', image: '/placeholder1.jpg' },
-      { id: 2, reelUrl: 'https://www.instagram.com/reel/DPDwyZjDcJW/?igsh=MWtjNHIxdXA5ZXBsZQ==', image: '/placeholder2.jpg' },
-      { id: 3, reelUrl: 'https://www.instagram.com/reel/example3/', image: '/placeholder3.jpg' }
+      { id: 1, reelUrl: 'https://www.instagram.com/reel/DPP2KfwiKFy/?igsh=MWhmeHV1YzNlcXA0dg==' },
+      { id: 2, reelUrl: 'https://www.instagram.com/reel/DPDwyZjDcJW/?igsh=MWtjNHIxdXA5ZXBsZQ==' }
     ],
     stats: 'Promoted to Manager • 7-8 videos created',
     color: 'from-blue-600 to-cyan-600'
@@ -79,7 +84,14 @@ Worked on video content creation for 2-3 local brand clients (cafes, small busin
 This is where I learned how agencies actually work. Sat in on client calls, saw how they pitched packages, understood pricing models for local businesses (₹5K-15K per month), watched how they handled client revisions.
 
 What I learned: Professional video production workflows, how to work with client briefs, agency-style editing, the business side of content—pricing, pitching, packages. Learning to create "good enough" content quickly vs spending days on "perfect" content. In agencies, speed matters.`,
-    thumbnails: [],
+    thumbnails: [
+      { id: 1, reelUrl: 'https://www.instagram.com/reel/C9FLP3Yx73N/?igsh=aDhkaWg4Zm13bzVz' },
+      { id: 2, reelUrl: 'https://www.instagram.com/reel/C9hsHXGyWR7/?igsh=MWdqYXF3MmNra2ZoYg==' },
+      { id: 3, reelUrl: 'https://www.instagram.com/reel/C74JsofyVTc/?igsh=cDR5NnRkNGYzOGI3' },
+      { id: 4, reelUrl: 'https://www.instagram.com/reel/DGk6jSnTYum/?igsh=M3psMDgwbWM1N2Y0' },
+      { id: 5, reelUrl: 'https://www.instagram.com/reel/C7whnGJi1SI/?igsh=MXhoejdtNXFqZDVr' },
+      { id: 6, reelUrl: 'https://www.instagram.com/reel/C7b1X0vycoM/?igsh=Ym5iNnJyemM1ajRz' }
+    ],
     stats: 'Cold DM success • Agency workflows learned',
     color: 'from-indigo-600 to-purple-600'
   },
@@ -117,7 +129,9 @@ Why it paused: The product wasn't ready. It was still in development, and they n
 The good part: They were upfront about the situation. No false promises, no ghosting—just honest communication that they needed to focus on building first, marketing later.
 
 What I learned: Not every opportunity pans out, and that's okay. Early-stage startups pivot and pause all the time. Royalty-based work is high-risk, high-reward. It's better to pause than to create content for something that's not ready. Building relationships matters—even if this didn't work out, I'm still connected with the founders.`,
-    thumbnails: [],
+    thumbnails: [
+      { id: 1, reelUrl: 'https://www.instagram.com/reel/DPjgs4oEnJ3/?igsh=MTY5NTM2ZXB6Y2Z2eg==' }
+    ],
     stats: 'Royalty-based • Product in development',
     color: 'from-green-600 to-emerald-600'
   },
@@ -209,8 +223,18 @@ function ContentCard({ project }) {
               target="_blank"
               rel="noopener noreferrer"
               className="thumbnail-link"
+              onClick={(e) => {
+                e.stopPropagation();
+              }}
             >
               <div className="thumbnail-placeholder">
+                <svg 
+                  viewBox="0 0 24 24" 
+                  className="instagram-logo"
+                  fill="currentColor"
+                >
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
                 <span className="play-icon">▶</span>
                 <span className="thumbnail-text">View Reel</span>
               </div>

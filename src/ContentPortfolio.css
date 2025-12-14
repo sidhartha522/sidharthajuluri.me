@@ -143,7 +143,7 @@
 /* Thumbnails Grid */
 .thumbnails-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   gap: 0.75rem;
   margin-bottom: 1.5rem;
 }
@@ -166,6 +166,7 @@
   transition: all 0.3s ease;
   cursor: pointer;
   border: 2px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem;
 }
 
 .thumbnail-placeholder:hover {
@@ -174,14 +175,25 @@
   transform: scale(1.05);
 }
 
-.play-icon {
-  font-size: 2rem;
+.instagram-logo {
+  width: 3rem;
+  height: 3rem;
   opacity: 0.9;
+}
+
+.play-icon {
+  font-size: 1.5rem;
+  opacity: 0.9;
+}
+
+.thumbnail-placeholder:hover .play-icon {
+  transform: scale(1.1);
 }
 
 .thumbnail-text {
   font-size: 0.75rem;
   opacity: 0.8;
+  text-align: center;
 }
 
 /* Read More Button */
